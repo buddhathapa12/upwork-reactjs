@@ -34,7 +34,7 @@ const Name = () => {
             androidFallbackLink: `https://play.google.com/store/apps/details?id=com.instagram.android`,
           },
           iosInfo:{
-            iosBundleId:"org.reactjs.native.example.FinalOne",
+            iosBundleId:"com.finalone",
             iosFallbackLink:"https://apps.apple.com/us/app/instagram/id389801252"
           }
           //longDynamicLink: `https://upworktest2.page.link/?link=https://whispering-forest-38899.herokuapp.com/${data}&apn=com.finalone`,
