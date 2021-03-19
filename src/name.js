@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 const Name = () => {
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
   const { name } = useParams();
   useEffect(() => {
     axios
@@ -16,6 +17,8 @@ const Name = () => {
           //alert(`${name} is not available`)
           setData(null);
         }
+
+        setLoading(true);
       });
   });
 
@@ -45,7 +48,12 @@ const Name = () => {
 
   return (
     <div>
-      {data ? `This page is for ${data}` : "Not Available"}
+      {loading
+        ? data
+          ? `This page is for ${data}`
+          : "Not Available"
+        : "Loading . . ."}
+
       <br></br>
       {data && <button onClick={handleClick}>Share</button>}
     </div>
